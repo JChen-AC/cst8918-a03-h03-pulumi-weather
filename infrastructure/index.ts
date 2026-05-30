@@ -24,7 +24,7 @@ const resourceGroup = new resources.ResourceGroup(`${prefixName}-rg`)
 // Create a managed Redis service
 const redis = new cache.Redis(`${prefixName}-redis`, {
   name: `${prefixName}-weather-cache`,
-  location: 'westus3',
+  location: 'canadacentral',
   resourceGroupName: resourceGroup.name,
   enableNonSslPort: true,
   redisVersion: 'Latest',
