@@ -1,4 +1,6 @@
 import * as pulumi from "@pulumi/pulumi";
+import * as resources from '@pulumi/azure-native/resources'
+import * as containerregistry from '@pulumi/azure-native/containerregistry'
 
 // Import the configuration settings for the current stack.
 const config = new pulumi.Config()
@@ -12,3 +14,4 @@ const containerPort = config.requireNumber('containerPort')
 const publicPort = config.requireNumber('publicPort')
 const cpu = config.requireNumber('cpu')
 const memory = config.requireNumber('memory')
+
